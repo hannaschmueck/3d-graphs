@@ -25,11 +25,15 @@
 
     const Graph = ForceGraph3D()
       (document.getElementById('3d-graph'))
+        .jsonUrl('../datasets/substance_abuse_logDice_673.json')
+        .nodeAutoColorBy('group')
         .enableNodeDrag(false)
         .enableNavigationControls(false)
         .showNavInfo(false)
-        .cameraPosition({ z: distance })
-        .graphData(gData);
+        .cameraPosition({ z: distance }
+
+        )
+        ;
 
     // camera orbit
     let angle = 0;
@@ -39,6 +43,6 @@
         z: distance * Math.cos(angle)
       });
       angle += Math.PI / 300;
-    }, 10);
+    }, 40);
   </script>
 </body>
