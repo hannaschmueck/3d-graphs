@@ -29,7 +29,7 @@
       extraRenderers: [new CSS2DRenderer()]
     })
     (document.getElementById('3d-graph'))
-      .jsonUrl('../datasets/substance_abuse_logDice_673.json')
+      .jsonUrl('../datasets/spoken BNC2014_clustered_1.json')
       
       .nodeAutoColorBy('group')
       .nodeVal(node => node.betweenness * 100)
@@ -44,10 +44,10 @@
       })
       .nodeThreeObjectExtend(true)
       .cooldownTicks(250)        
-      .linkDirectionalParticles("logDice")
-      .linkDirectionalParticleSpeed(d => Math.sqrt(d.logDice)*0.001)
+      .linkDirectionalParticles("dice")
+      .linkDirectionalParticleSpeed(d => Math.sqrt(d.dice)*0.01)
       .linkDirectionalParticleWidth(3)
-      .d3Force("link", d3.forceLink().strength(d => d.logDice))
+      .d3Force("link", d3.forceLink().strength(d => d.dice))
       
       
 
